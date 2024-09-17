@@ -129,32 +129,34 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={editTaskBox == true ? "slides" : "editParent"}>
-        <div className="editHead">
-          <h4>Update Your Task</h4>
-        </div>
-        <div className="editInput">
-          <input
-            autoFocus
-            value={editVal || ""}
-            type="text"
-            onChange={(e) => setEditVal(e.target.value)}
-          />
-        </div>
-        <div className="editSaveBtns">
-          <button className="updateBtn" onClick={updateFun}>
-            Update
-          </button>
-          <button
-            className="clsBtn"
-            onClick={() => {
-              setEditTaskBox(!editTaskBox);
-              setCss(!css);
-            }}>
-            Cancel
-          </button>
-        </div>
+     {
+      editTaskBox &&  <div className="editParent">
+      <div className="editHead">
+        <h4>Update Your Task</h4>
       </div>
+      <div className="editInput">
+        <input
+          autoFocus
+          value={editVal || ""}
+          type="text"
+          onChange={(e) => setEditVal(e.target.value)}
+        />
+      </div>
+      <div className="editSaveBtns">
+        <button className="updateBtn" onClick={updateFun}>
+          Update
+        </button>
+        <button
+          className="clsBtn"
+          onClick={() => {
+            setEditTaskBox(!editTaskBox);
+            setCss(!css);
+          }}>
+          Cancel
+        </button>
+      </div>
+    </div>
+     }
     </div>
   );
 };
