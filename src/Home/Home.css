@@ -178,6 +178,7 @@
   background-color: red;
   color: white;
   transition: 0.6s;
+  cursor: pointer;
 }
 .editParent {
   position: absolute;
