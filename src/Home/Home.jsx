@@ -63,15 +63,15 @@ const Home = () => {
     setTasks(updatedTasks);
   }
 
-  function completeFun(id) {
-    let completeTask = tasks.map((val) => {
-      if (!val.id == id) {
-        return tasks;
-      }
-      return { ...tasks, completed: true };
-    });
-    return setTasks(completeTask);
-  }
+  // function completeFun(id) {
+  //   let completeTask = tasks.map((val) => {
+  //     if (!val.id == id) {
+  //       return tasks;
+  //     }
+  //     return { ...tasks, completed: true };
+  //   });
+  //   return setTasks(completeTask);
+  // }
   return (
     <div>
       <div className={css ? "parentContainer" : "parentContainer2"}>
@@ -85,6 +85,7 @@ const Home = () => {
             </h1>
             <div className="addTask">
               <input
+                autoFocus
                 type="text"
                 placeholder="Write Your Task"
                 value={taskName}
@@ -135,6 +136,7 @@ const Home = () => {
           </div>
           <div className="editInput">
             <input
+              autoFocus
               value={editVal || ""}
               type="text"
               onChange={(e) => setEditVal(e.target.value)}
