@@ -324,4 +324,10 @@
   .editSaveBtns {
     width: 60%;
   }
+  .slides{
+    width: 300px;
+    height: 200px;
+    top: 35%;
+    left: 12%;
+  }
 }
